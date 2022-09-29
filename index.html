@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                text-align: right;
+                animation: blink 0.3s infinite;
+            }
+            h1 {
+                color: blue;
+                text-align: center;
+                animation: zoom 0.7s infinite;
+            }
+
+            p {
+                font-size: 32px;
+            }
+
+            .marquee {
+                background-color: aqua;
+                white-space: nowrap;
+                animation: oscillate 2s infinite linear;
+                
+            }
+
+            .subheading {
+                color: red;
+                display: inline;
+                /*animation: zoom 0.4s infinite;*/
+            }
+
+            #frogText {
+                color: blue;
+                text-align: center;
+            }
+
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                animation: frogSpin 0.5s infinite;
+            }
+
+            @keyframes blink {
+                from {
+                    background-image: url('colourGrid.jpeg');
+                }
+                to {
+                    background-image: none;
+                }
+            }
+
+            @keyframes frogSpin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes zoom {
+                from {
+                    transform: scale(1);
+                }
+                to { 
+                    transform: scale(3);
+                }
+            }
+
+            @keyframes oscillate {
+                0% {
+                    margin-right: 100%;
+                }
+                50% {
+                    margin-right: 0;
+                }
+                100% {
+                    margin-right: 100%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My first webpage</h1>
+            <span class="marquee"><p class="subheading">This is my first webpage built on 29th of Sep 2022</p></span>
+            <img class="center" src="frog.png">
+            <p id="frogText">Above is a picture of a frog</p>
+            <p class="subheading">arsoietnarseotnrsaoeitnrsaeoitnrasoeitnrsaoeis</p>
+        </div>
+    </body>
+</html>
+
